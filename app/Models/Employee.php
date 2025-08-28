@@ -22,14 +22,23 @@ class Employee extends Model
         'account_no',
         'guardian_name',
         'guardian_no',
-        'designation',
-        'department',
-        'contract',
+        'designation_id',
+        'department_id',
+        'contract_id',
         'address',
         'status',
         
     ];
-    public function resign(){
-        return $this->hasOne(Resignation::class, 'employee_id');
-    }
+   public function designation(){
+    return $this->belongsTo(Designation::class);
+   }
+
+   public function department(){
+    return $this->belongsTo(Department::class);
+   }
+
+   public function contract(){
+    return $this->belongsTo(Contract::class);
+   }
+
 }

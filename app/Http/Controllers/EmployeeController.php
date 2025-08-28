@@ -14,7 +14,7 @@ class EmployeeController extends Controller
        return $this->employeeService = $employeeService; 
     }
     public function index(){
-        $query = Employee::all();
+        $query = Employee::with([ 'designation', 'department', 'contract'])->get();
         return $query;
 
     }
@@ -25,8 +25,8 @@ class EmployeeController extends Controller
     }
 
     public function update(Request $request, $id){
-        $query = $this->employeeService->update($request, $id);
-        return $query;
+        // $query = $this->employeeService->update($request, $id);
+        // return $query;
     }
 
 
