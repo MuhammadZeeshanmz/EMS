@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UpdateEmployeeRequest;
 use App\Models\Employee;
 use App\Services\EmployeeService;
 use Illuminate\Http\Request;
@@ -24,9 +25,9 @@ class EmployeeController extends Controller
         return $query;
     }
 
-    public function update(Request $request, $id){
-        // $query = $this->employeeService->update($request, $id);
-        // return $query;
+    public function update(Request $request, $employee_code){
+        $query = $this->employeeService->update($request, $employee_code);
+        return $query;
     }
 
 
