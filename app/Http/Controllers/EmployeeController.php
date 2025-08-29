@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UpdateEmployeeRequest;
+use App\Http\Resources\EmployeeResource;
 use App\Models\Employee;
 use App\Services\EmployeeService;
 use Illuminate\Http\Request;
@@ -44,6 +45,6 @@ class EmployeeController extends Controller
     public function show($id)
     {
         $employee = Employee::findOrFail($id);
-        return $employee;
+        return new EmployeeResource($employee);
     }
 }
