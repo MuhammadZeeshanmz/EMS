@@ -32,6 +32,8 @@ class EmployeeResource extends JsonResource
             'status' => $this->status,
             'guardian_name' => $this->guardian_name,
             'guardian_no' => $this->guardian_no,
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at
 
         ];
     }
