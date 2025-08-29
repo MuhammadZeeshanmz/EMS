@@ -17,7 +17,7 @@ class Employee extends Model
         'cell_no',
         'image',
         'joining_date',
-        'date_of_birth	',
+        'date_of_birth',
         'qualification',
         'account_no',
         'guardian_name',

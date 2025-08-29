@@ -9,9 +9,9 @@ use App\Http\Controllers\ResignationController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::apiResource('/employee', EmployeeController::class);
-Route::apiResource('/resign', ResignationController::class);
-Route::apiResource('/department', DepartmentController::class);
-Route::apiResource('/designation', DesignationController::class);
-Route::apiResource('/contract', ContractController::class);
-Route::apiResource('/duty', DutyController::class);
+Route::apiResource('/employees', EmployeeController::class);
+Route::apiResource('/resigns', ResignationController::class);
+Route::apiResource('/departments', DepartmentController::class);
+Route::apiResource('/designations', DesignationController::class);
+Route::apiResource('/contracts', ContractController::class);
+Route::apiResource('/dutys', DutyController::class);
